@@ -1,0 +1,155 @@
+*{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+}
+:root {
+        --primary-color: #F8F8F8;
+        --second-color:#000C24;
+        --third-color:#1AC7E9;
+}
+ul {
+        list-style: none;
+}
+
+body {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+}
+
+header {
+        background-image: url(/imgs/home-bg-white.png);
+        background-repeat: no-repeat;
+        background-size: 12%;
+        background-position: 10px 15px;
+
+}
+
+
+#home{
+        color:var(--third-color)
+}
+
+header nav ul {
+        display: flex;
+        margin-left: 34px;
+        width: 100%;
+        gap: 57px;
+        height: 100px;
+        color: var(--primary-color);
+
+        align-items: center;
+    }
+
+body{
+        background-image: url(/imgs/body-background-blue.png);
+        background-repeat: no-repeat;
+        background-size: 95%;
+}      
+
+.name-social-media{
+        color: var(--primary-color);
+        margin: 50px 0 0 50px;
+        display: flex;
+        height: 220px;
+        flex-direction: column;
+        gap: 25px;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: flex-start;
+}
+
+.name-social-media img {
+        width:45px;
+        height:45px;
+        cursor: pointer;
+
+}
+.my-description {
+        width:380px     
+}
+
+.about-me img {
+        width:300px;
+        height:300px;
+        filter: grayscale(80%);
+        border-radius: 10px;
+        
+}
+
+.about-me h3,.skills h3 {
+        color:var(--third-color);
+        margin-bottom: 10px;
+
+}
+
+
+
+.about-me{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: baseline;
+        justify-content: center;
+        color: var(--second-color);
+        margin-top: 75px;
+        text-align: justify;
+
+}
+.projects{
+        width:250px     
+}
+.projects img {
+ width:250px;
+ height: 250px;
+}
+
+.skills{
+        width:500px;
+        margin: 30px;      
+}
+/*****TOGGLE *****/
+.toggle {
+        position: relative;
+        width: 48px;
+        height: 25px;
+        background-color: var(--primary-color);
+        border-radius: 10px;
+      }
+      
+      .toggle input[type="checkbox"] {
+        display: none;
+      }
+      
+      .toggle-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+
+      }
+      
+      .toggle-circle::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--second-color);
+        transition: transform 0.3s;
+      }
+
+      
+      .toggle input[type="checkbox"]:checked + .toggle-circle::before {
+        transform: translate(100%, -50%);
+      }
+
+/*****************************************************************/
+
