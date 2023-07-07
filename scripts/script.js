@@ -7,16 +7,16 @@ const toggleCircle = document.querySelector('.toggle-circle')
 function changeColors() {
     const root = document.querySelector(":root")
     const body = document.querySelector('#body')
-    if (body.dataset.theme === "white"){
-        root.style.setProperty("--primary-color", "#000C24;")
+    if (body.dataset.theme === "blue"){
+        root.style.setProperty("--primary-color", "#000C24")
         root.style.setProperty("--second-color", "#F8F8F8")
         root.style.setProperty("--third-color", "#1AC7E9")
-        body.dataset.theme = "blue" } 
+        body.dataset.theme = "white" } 
      else {
-        root.style.setProperty("--primary-color", "#F8F8F8;")
+        root.style.setProperty("--primary-color", "#F8F8F8")
         root.style.setProperty("--second-color", "#000C24")
         root.style.setProperty("--third-color", "#1AC7E9")
-        body.dataset.theme = "white"
+        body.dataset.theme = "blue"
     }
 }
 
