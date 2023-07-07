@@ -11,18 +11,22 @@
 ul {
         list-style: none;
 }
-
-body {
-        font-family: 'Lato', sans-serif;
-        font-weight: bold;
+ul li {
+        color: var(--primary-color)
 }
+
+
 
 header {
         background-image: url(/imgs/home-bg-white.png);
         background-repeat: no-repeat;
         background-size: 12%;
         background-position: 10px 15px;
-
+}
+.skills-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
 }
 
 
@@ -32,7 +36,7 @@ header {
 
 header nav ul {
         display: flex;
-        margin-left: 34px;
+        padding-left: 34px;
         width: 100%;
         gap: 57px;
         height: 100px;
@@ -40,12 +44,24 @@ header nav ul {
 
         align-items: center;
     }
-
-body{
+.blue-bg{
         background-image: url(/imgs/body-background-blue.png);
         background-repeat: no-repeat;
         background-size: 95%;
-}      
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        background-color: var(--primary-color);
+}    
+.white-bg{
+      
+        background-image: url(/imgs/body-background-white.png);
+        background-repeat: no-repeat;
+        background-size: 95%;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        background-color: var(--second-color);
+            
+}  
 
 .name-social-media{
         color: var(--primary-color);
@@ -78,13 +94,25 @@ body{
         
 }
 
-.about-me h3,.skills h3 {
+section h3 {
         color:var(--third-color);
         margin-bottom: 10px;
 
 }
 
+.projects-container{
+        display:flex;
+        gap:10px;
+        flex-wrap: wrap;
+}
 
+.project-wrapper{
+        display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
 
 .about-me{
         display: flex;
@@ -97,16 +125,37 @@ body{
         text-align: justify;
 
 }
+#paint-image{
+        top: 905px;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        width: 90%;
+        height: 810px;
+}
+#detail-image{
+        top: 460px;
+        right: 65px;
+        z-index: -1;
+        position: absolute;
+        width:25%
+}
 .projects{
-        width:250px     
+        width:100%;
+        padding: 30px
 }
 .projects img {
  width:250px;
  height: 250px;
+ border-radius: 10px;
+ filter: grayscale(95%);
+
+
+ 
 }
 
 .skills{
-        width:500px;
+width:50%;
         margin: 30px;      
 }
 /*****TOGGLE *****/
@@ -153,3 +202,13 @@ body{
 
 /*****************************************************************/
 
+footer {
+        background-color: var(--second-color);
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+footer p {
+        color: var(--primary-color);
+}
