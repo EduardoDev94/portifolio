@@ -8,6 +8,8 @@
         --second-color:#000C24;
         --third-color:#1AC7E9;
 }
+
+
 ul {
         list-style: none;
 }
@@ -15,14 +17,28 @@ ul li {
         color: var(--primary-color)
 }
 
-
-
-header {
+.blue-header{
         background-image: url(/imgs/home-bg-white.png);
         background-repeat: no-repeat;
         background-size: 12%;
         background-position: 10px 15px;
+        position: fixed;
+        top:0px;
+        width:100%
+        
 }
+
+.white-header {
+        background-image: url(/imgs/home-bg-blue.png);
+        background-repeat: no-repeat;
+        background-size: 12%;
+        background-position: 10px 15px;
+        position:fixed;
+        top:0px;
+        width:100%
+}
+
+
 .skills-icons {
         display: flex;
         flex-wrap: wrap;
@@ -44,6 +60,8 @@ header nav ul {
 
         align-items: center;
     }
+
+
 .blue-bg{
         background-image: url(/imgs/body-background-blue.png);
         background-repeat: no-repeat;
@@ -51,6 +69,7 @@ header nav ul {
         font-family: 'Lato', sans-serif;
         font-weight: bold;
         background-color: var(--primary-color);
+        background-position: 0px 0px;
 }    
 .white-bg{
       
@@ -59,13 +78,14 @@ header nav ul {
         background-size: 95%;
         font-family: 'Lato', sans-serif;
         font-weight: bold;
-        background-color: var(--second-color);
+        background-color: var(--primary-color);
+        background-position: 0px 0px;
             
 }  
 
 .name-social-media{
         color: var(--primary-color);
-        margin: 50px 0 0 50px;
+        margin: 115px 0 0 50px;
         display: flex;
         height: 220px;
         flex-direction: column;
@@ -121,7 +141,7 @@ section h3 {
         align-items: baseline;
         justify-content: center;
         color: var(--second-color);
-        margin-top: 75px;
+        margin-top: 23px;
         text-align: justify;
 
 }
@@ -134,11 +154,11 @@ section h3 {
         height: 810px;
 }
 #detail-image{
-        top: 460px;
-        right: 65px;
+        top: 413px;
+        right: 89px;
         z-index: -1;
         position: absolute;
-        width:25%
+        width: 23%;
 }
 .projects{
         width:100%;

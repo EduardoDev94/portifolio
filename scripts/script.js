@@ -1,7 +1,16 @@
 console.log('js vinculado')
 
+
+
 const toggleCircle = document.querySelector('.toggle-circle')
 
+toggleCircle.addEventListener ('click', changeTheme)
+
+function changeTheme(){
+  changeColors()
+  changeBodyBgImage()
+  changeHeaderBgImage()
+}
 
 
 function changeColors() {
@@ -20,6 +29,16 @@ function changeColors() {
     }
 }
 
+function changeHeaderBgImage(){
+  const header = document.querySelector('#header')
+  if(header.classList.contains('blue-header')){
+    header.classList.remove('blue-header')
+    header.classList.add('white-header')
+  }else {
+    header.classList.remove('white-header')
+    header.classList.add('blue-header')
+  }
+}
 
 
 function changeBodyBgImage() {
