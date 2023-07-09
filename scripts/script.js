@@ -1,5 +1,16 @@
 console.log('js vinculado')
 
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('header');
+  var scrolled = window.scrollY;
+
+  // Adiciona ou remove a classe "scroll" no header dependendo do scroll da página
+  if (scrolled > 0) {
+    header.classList.add('scroll');
+  } else {
+    header.classList.remove('scroll');
+  }
+});
 
 
 const toggleCircle = document.querySelector('.toggle-circle')
@@ -10,6 +21,8 @@ function changeTheme(){
   changeColors()
   changeBodyBgImage()
   changeHeaderBgImage()
+  changeDetailImage()
+  changeRightImage()
 }
 
 
@@ -39,6 +52,15 @@ function changeHeaderBgImage(){
     header.classList.add('blue-header')
   }
 }
+ function changeDetailImage(){
+  const detailImage = document.querySelector('#detail-image')
+  if(detailImage.src.includes("/imgs/mancha-azul.png")) {
+    detailImage.src = '/imgs/mancha-branca.png'
+  }else{
+    detailImage.src = '/imgs/mancha-azul.png'
+  } 
+ }
+
 
 
 function changeBodyBgImage() {
@@ -54,8 +76,18 @@ function changeBodyBgImage() {
   }
  
   
+  function changeRightImage(){
+    const paintImage = document.querySelector('#paint-image')
+    if(paintImage.src.includes("/imgs/relative-img-blue.png")) {
+      paintImage.src = "/imgs/relative-img-white.png"
+    }else{
+      paintImage.src = "/imgs/relative-img-blue.png"
+    } 
+   }
   
-  
+   function changeLinkedinImage(){
+
+   }
   
   
   
