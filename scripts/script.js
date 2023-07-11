@@ -86,8 +86,14 @@ function changeBodyBgImage() {
    }
   
    function changeLinkedinImage(){
-
-   }
+    const linkedin = document.querySelector('#linkedin-image')
+      if(linkedin.src.includes("/imgs/relative-img-blue.png")) {
+        linkedin.src = "/imgs/relative-img-white.png"
+      }else{
+        linkedin.src = "/imgs/relative-img-blue.png"
+      } 
+    }
+   
   
   
   

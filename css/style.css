@@ -21,7 +21,7 @@ ul li {
 .blue-header{
         background-image: url(/imgs/home-bg-white.png);
         background-repeat: no-repeat;
-        background-size: 12%;
+        background-size: 11%;
         background-position: 10px 15px;
         position: fixed;
         top:0px;
@@ -32,7 +32,7 @@ ul li {
 .white-header {
         background-image: url(/imgs/home-bg-blue.png);
         background-repeat: no-repeat;
-        background-size: 12%;
+        background-size: 11%;
         background-position: 10px 15px;
         position:fixed;
         top:0px;
@@ -153,7 +153,7 @@ section h3 {
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
-    width: 250px;
+    width: 70%;
     color:var(--second-color)
 }
 
@@ -169,6 +169,7 @@ section h3 {
         text-align: justify;
 
 }
+
 #paint-image{
         top: 905px;
         position: absolute;
@@ -178,19 +179,20 @@ section h3 {
         height: 810px;
 }
 #detail-image{
-        top: 413px;
+        top: 373px;
         right: 89px;
         z-index: -1;
         position: absolute;
         width: 23%;
 }
 .projects{
+        text-align: justify;
         width:100%;
         padding: 30px;
 
 }
 .projects img {
- width:250px;
+ width:80%;
  height: 250px;
  border-radius: 10px;
  filter: grayscale(95%);
