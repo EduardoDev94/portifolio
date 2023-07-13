@@ -64,11 +64,6 @@ header.scroll{
 
 }
 
-/*        backdrop-filter: blur(10px);
-    box-shadow: 3px 5px 3px 3px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease-in-out; 
-     z-index: 999;
-       */
 
 header nav ul {
         display: flex;
@@ -249,6 +244,53 @@ a {
       }
 
 /*****************************************************************/
+/**********MENU MOBILE************/
+#menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: center;
+        gap: 7px;
+        position: absolute;
+        top: 95px;
+        border-radius: 10px;
+        opacity: 0.9;
+        right: 3%;
+        padding: 11px;
+        background-color: var(--second-color);
+        z-index: 200;
+        margin-right: 15px;
+    }
+    
+    #menu-mobile {
+        display: none;
+        position: absolute;
+        width: 111px;
+        z-index: 1568;
+        right: 0%;
+        top: -29px;
+        background-color: var(--secondary-color);
+    }
+    
+    #menu-mobile ul li {
+        gap: 10px;
+        font-weight: 600;
+        font-size: 18px;
+        user-select: none;
+    }
+    #menu-mobile ul li a {
+        color: var(--primary-color);
+    }
+
+    #burguer {
+        display:none
+    }
+
+    /**************************************************************************/
+
+
+
 
 footer {
         background-color: var(--second-color);
@@ -259,4 +301,22 @@ footer {
 }
 footer p {
         color: var(--primary-color);
+}
+
+@media (max-width: 502px) {
+
+        header>nav>ul>li {
+            display: none;
+        }
+        #burguer {
+                display: block;
+            }
+        #home{
+                display:block
+        }
+        header>nav>ul {
+                display:flex;
+                justify-content: space-around;
+                gap:0
+        }
 }
