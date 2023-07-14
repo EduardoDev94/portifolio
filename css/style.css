@@ -39,6 +39,11 @@ ul li {
         width:100%
 }
 
+ul li a {
+        color:var(--primary-color);
+        transition: all 0.4s;
+        cursor: pointer;
+}
 
 .skills-icons {
         display: flex;
@@ -47,8 +52,10 @@ ul li {
 }
 
 
-#home{
-        color:var(--third-color)
+header nav ul #home{
+        color:var(--third-color);
+        cursor:pointer
+        
 }
 
 header{
@@ -100,7 +107,7 @@ header nav ul {
 
 .name-social-media{
         color: var(--primary-color);
-        margin: 115px 0 0 50px;
+        margin: 115px 0 0 30px;
         display: flex;
         height: 220px;
         flex-direction: column;
@@ -122,8 +129,8 @@ header nav ul {
 }
 
 .about-me img {
-        width:300px;
-        height:300px;
+        width:340px;
+        height:340px;
         filter: grayscale(100%);
         border-radius: 10px;
         box-shadow: 8px 8px 7px rgba(0, 0, 0, 0.8);
@@ -202,7 +209,7 @@ a {
         color:var(--third-color)
 }
 /*****TOGGLE *****/
-.toggle {
+.toggle, .toggle-res {
         position: relative;
         width: 48px;
         height: 25px;
@@ -210,11 +217,11 @@ a {
         border-radius: 10px;
       }
       
-      .toggle input[type="checkbox"] {
+      .toggle input[type="checkbox"],.toggle-res input[type="checkbox"] {
         display: none;
       }
       
-      .toggle-circle {
+      .toggle-circle, .toggle-circle-res {
         position: absolute;
         top: 0;
         left: 0;
@@ -223,6 +230,18 @@ a {
         border-radius: 50%;
         cursor: pointer;
 
+      }
+      .toggle-circle-res::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--second-color);
+        transition: transform 0.3s;
       }
       
       .toggle-circle::before {
@@ -240,6 +259,9 @@ a {
 
       
       .toggle input[type="checkbox"]:checked + .toggle-circle::before {
+        transform: translate(100%, -50%);
+      }
+      .toggle-res input[type="checkbox"]:checked + .toggle-circle-res::before {
         transform: translate(100%, -50%);
       }
 
@@ -302,6 +324,10 @@ footer {
 footer p {
         color: var(--primary-color);
 }
+
+ul li a:hover{
+        color:var(--third-color)
+}
 @media(max-width: 882px){
         .blue-bg{
                 background-size: 100%;
@@ -316,6 +342,9 @@ footer p {
                 background-size: 15%
         }
         @media (max-width:680px) {
+                .about-me img{
+                        border-radius: 50%;
+                }
 
                 .blue-bg{
                         background-size: 125%;
@@ -332,6 +361,12 @@ footer p {
 
                
                 @media (max-width: 502px) {
+                        .projects-container{
+
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
 
                         header>nav>ul>li {
                             display: none;
@@ -366,5 +401,4 @@ footer p {
 
 
      
-}
  

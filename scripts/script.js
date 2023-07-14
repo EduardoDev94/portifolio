@@ -12,6 +12,8 @@ window.addEventListener('scroll', function() {
   }
 });
 
+const toggleCircleResp = document.querySelector('.toggle-circle-res')
+toggleCircleResp.addEventListener('click',changeTheme )
 
 const toggleCircle = document.querySelector('.toggle-circle')
 
@@ -25,6 +27,7 @@ function changeTheme(){
   changeRightImage()
   changeLinkedinImage()
   changeSkillsIcons ()
+  changeMenuIcon()
 }
 
 
@@ -73,6 +76,15 @@ function changeBodyBgImage() {
     } else {
       body.classList.remove('white-bg');
       body.classList.add('blue-bg');
+    }
+  }
+
+  function changeMenuIcon () {
+    const menuIcon = document.querySelector('#menu-icon')
+    if(menuIcon.src.includes("/imgs/icons/menu-white.svg")){
+      menuIcon.src = "/imgs/icons/menu-blue.svg"
+    }else{
+      menuIcon.src = "/imgs/icons/menu-white.svg"
     }
   }
  

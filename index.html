@@ -19,10 +19,10 @@
     <header id="header" class="blue-header">
         <nav>
             <ul>
-                <li id="home">Home</li>
-                <li>Sobre Mim</li>
-                <li>Skills</li>
-                <li>Projetos</li>
+                <li id="home"><a href="#sobre-mim">Home</a></li>
+                <li><a href="#sobre-mim">Sobre Mim</a></li>
+                <li><a href="#skills-id" >Skills</a></li>
+                <li><a href="#projetos">Projetos</a></li>
                 <li>
                     <div class="toggle">
                         <input type="checkbox" id="toggle-checkbox">
@@ -30,7 +30,7 @@
                     </div>
                 </li>
                 <li id="burguer">
-                    <img src="/imgs/icons/menu-white.svg" alt="menu">
+                    <img id="menu-icon" src="/imgs/icons/menu-white.svg" alt="menu">
                   </li>
             </ul>
         </nav>
@@ -40,9 +40,9 @@
               <li><a>Skills</a></li>
               <li><a>Projetos</a></li>
               <li>
-                <div class="toggle">
-                    <input type="checkbox" id="toggle-checkbox">
-                    <label for="toggle-checkbox" class="toggle-circle"></label>
+                <div class="toggle-res">
+                    <input type="checkbox" id="toggle-checkbox-res">
+                    <label for="toggle-checkbox-res" class="toggle-circle-res"></label>
                 </div>
             </li>
               
@@ -52,17 +52,17 @@
     <main>
         <section class="name-social-media">
             <h3>Eduardo Gonçalves Sena</h3>
-            <h4>Fullstack Web Developer</h4>
+            <h4>Front End Web Developer</h4>
             <div class="social-media-link">
-                <img id="linkedin-image" src="/imgs/icons/linkedin-white.png" alt="linkedin-link">
-                <img src="/imgs/icons/github.svg" alt="github-link">
+                <a target="_blank" href="https://www.linkedin.com/in/eduardo-sena-a4600b140/"><img id="linkedin-image" src="/imgs/icons/linkedin-white.png" alt="linkedin-link"></a>
+                <a target="_blank" href="https://github.com/eduardodev94"><img src="/imgs/icons/github.svg" alt="github-link"></a>
             </div>
         </section>
-        <section class="about-me">
+        <section id="sobre-mim" class="about-me">
             <img src="/imgs/b186c296-f7af-41d3-b463-3acd327b4ee4.jpeg" alt="me">
             <div class="my-description">
                 <h3>About Me</h3>
-                <p>Olá! Meu nome é Eduardo e tenho 28 anos. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas.</p>
+                <p> Meu nome é Eduardo e tenho 28 anos. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas.</p>
                     Estou constantemente buscando aprender e me aprimorar nas últimas tendências e técnicas de desenvolvimento. 
                     <p> Acredito que a tecnologia é uma ferramenta poderosa que pode impulsionar a inovação e melhorar a vida das pessoas.</p>
                     Durante meus estudos, tenho adquirido habilidades em diversas áreas, como programação, banco de dados e desenvolvimento web. 
@@ -72,7 +72,7 @@
         </section>
         <img id="paint-image" src="/imgs/relative-img-blue.png" alt="detail-img">
         <img id="detail-image" src="/imgs/mancha-azul.png" alt="detail-img">
-        <section class="skills">
+        <section id="skills-id" class="skills">
             <h3>Skills</h3>
             <div class="skills-icons">
                 <img id="html-icon" src="/imgs/icons/htmlicon-bgblue.svg" alt="html-icon">
@@ -84,7 +84,7 @@
                 <img src="/imgs/icons/csharp-bgblue.svg" alt="c#-icon">      
             </div>
         </section>
-        <section class="projects">
+        <section id="projetos" class="projects">
             <h3>Projetos</h3>
             <div class="projects-container">
                 <div class="project-wrapper">
