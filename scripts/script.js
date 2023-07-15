@@ -30,6 +30,16 @@ function changeTheme(){
   changeMenuIcon()
 }
 
+const home = document.querySelector('#home')
+const goTopPage = () =>  window.scrollTo({
+  top: 0,
+  behavior: 'smooth'
+});
+
+home.addEventListener('click', goTopPage)
+
+
+
 
 function changeColors() {
     const root = document.querySelector(":root")

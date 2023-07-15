@@ -43,6 +43,7 @@ ul li a {
         color:var(--primary-color);
         transition: all 0.4s;
         cursor: pointer;
+        text-decoration:none
 }
 
 .skills-icons {
@@ -52,7 +53,7 @@ ul li a {
 }
 
 
-header nav ul #home{
+ header nav ul #home{
         color:var(--third-color);
         cursor:pointer
         
@@ -131,7 +132,7 @@ header nav ul {
 .about-me img {
         width:340px;
         height:340px;
-        filter: grayscale(100%);
+
         border-radius: 10px;
         box-shadow: 8px 8px 7px rgba(0, 0, 0, 0.8);
 }
@@ -197,7 +198,7 @@ section h3 {
  width:75%;
  height: 250px;
  border-radius: 10px;
- filter: grayscale(95%);
+ filter: grayscale(10%);
 }
 
 .skills{
@@ -374,7 +375,7 @@ ul li a:hover{
                         #burguer {
                                 display: block;
                             }
-                        #home{
+                        #home-container{
                                 display:block
                         }
                         header>nav>ul {
