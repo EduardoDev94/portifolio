@@ -12,6 +12,8 @@ window.addEventListener('scroll', function() {
   }
 });
 
+const toggleCircleResp = document.querySelector('.toggle-circle-res')
+toggleCircleResp.addEventListener('click',changeTheme )
 
 const toggleCircle = document.querySelector('.toggle-circle')
 
@@ -23,7 +25,20 @@ function changeTheme(){
   changeHeaderBgImage()
   changeDetailImage()
   changeRightImage()
+  changeLinkedinImage()
+  changeSkillsIcons ()
+  changeMenuIcon()
 }
+
+const home = document.querySelector('#home')
+const goTopPage = () =>  window.scrollTo({
+  top: 0,
+  behavior: 'smooth'
+});
+
+home.addEventListener('click', goTopPage)
+
+
 
 
 function changeColors() {
@@ -62,7 +77,6 @@ function changeHeaderBgImage(){
  }
 
 
-
 function changeBodyBgImage() {
     const body = document.querySelector('#body');
     
@@ -72,6 +86,15 @@ function changeBodyBgImage() {
     } else {
       body.classList.remove('white-bg');
       body.classList.add('blue-bg');
+    }
+  }
+
+  function changeMenuIcon () {
+    const menuIcon = document.querySelector('#menu-icon')
+    if(menuIcon.src.includes("/imgs/icons/menu-white.svg")){
+      menuIcon.src = "/imgs/icons/menu-blue.svg"
+    }else{
+      menuIcon.src = "/imgs/icons/menu-white.svg"
     }
   }
  
@@ -87,14 +110,50 @@ function changeBodyBgImage() {
   
    function changeLinkedinImage(){
     const linkedin = document.querySelector('#linkedin-image')
-      if(linkedin.src.includes("/imgs/relative-img-blue.png")) {
-        linkedin.src = "/imgs/relative-img-white.png"
+      if(linkedin.src.includes("/imgs/icons/linkedin-white.png")) {
+        linkedin.src = "/imgs/icons/linkedin-blue.png"
       }else{
-        linkedin.src = "/imgs/relative-img-blue.png"
+        linkedin.src = "/imgs/icons/linkedin-white.png"
       } 
     }
    
+  function changeSkillsIcons() {
+    const htmlIcon = document.querySelector('#html-icon')
+    const skills = document.querySelector('.skills-icons')
+    if(htmlIcon.src.includes ("/imgs/icons/htmlicon-bgblue.svg")){
+      skills.innerHTML = ''
+      skills.innerHTML = `                 <img id="html-icon" src="/imgs/icons/htmlicon.svg" alt="html-icon">
+      <img src="/imgs/icons/cssicon.svg" alt="css-icon">
+      <img src="/imgs/icons/giticon.svg" alt="git-icon">
+      <img src="/imgs/icons/jsicon.svg" alt="js-icon">
+      <img src="/imgs/icons/nodeicon.svg" alt="node-icon">
+      <img src="/imgs/icons/reacticon.svg" alt="react-icon">
+      <img src="/imgs/icons/csharpicon.svg" alt="c#-icon">   `
+    }else{
+      skills.innerHTML = ''
+      skills.innerHTML = `                <img id="html-icon" src="/imgs/icons/htmlicon-bgblue.svg" alt="html-icon">
+      <img src="/imgs/icons/cssicon-bgblue.svg" alt="css-icon">
+      <img src="/imgs/icons/giticon-bgblue.svg" alt="git-icon">
+      <img src="/imgs/icons/jsicon-bgblue.svg" alt="js-icon">
+      <img src="/imgs/icons/nodeicon-bgblue.svg" alt="node-icon">
+      <img src="/imgs/icons/reacticon-bgblue.svg" alt="react-icon">
+      <img src="/imgs/icons/csharp-bgblue.svg" alt="c#-icon">   `
+    }
+  }
   
   
-  
-  
+
+  // Menu responsivo
+const icon = document.querySelector('#burguer')
+const menu = document.querySelector('#menu-mobile')
+
+icon.addEventListener ('click', clickMenu )
+
+function clickMenu() {
+    if (menu.style.display == 'block'){
+        menu.style.display = 'none'
+    } else {
+        menu.style.display = 'block'
+    }
+}
+

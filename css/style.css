@@ -22,7 +22,7 @@ ul li {
         background-image: url(/imgs/home-bg-white.png);
         background-repeat: no-repeat;
         background-size: 11%;
-        background-position: 10px 15px;
+        background-position: 5px 15px;
         position: fixed;
         top:0px;
         width:100%
@@ -33,12 +33,18 @@ ul li {
         background-image: url(/imgs/home-bg-blue.png);
         background-repeat: no-repeat;
         background-size: 11%;
-        background-position: 10px 15px;
+        background-position: 5px 15px;
         position:fixed;
         top:0px;
         width:100%
 }
 
+ul li a {
+        color:var(--primary-color);
+        transition: all 0.4s;
+        cursor: pointer;
+        text-decoration:none
+}
 
 .skills-icons {
         display: flex;
@@ -47,8 +53,10 @@ ul li {
 }
 
 
-#home{
-        color:var(--third-color)
+ header nav ul #home{
+        color:var(--third-color);
+        cursor:pointer
+        
 }
 
 header{
@@ -64,11 +72,6 @@ header.scroll{
 
 }
 
-/*        backdrop-filter: blur(10px);
-    box-shadow: 3px 5px 3px 3px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s ease-in-out; 
-     z-index: 999;
-       */
 
 header nav ul {
         display: flex;
@@ -85,7 +88,7 @@ header nav ul {
 .blue-bg{
         background-image: url(/imgs/body-background-blue.png);
         background-repeat: no-repeat;
-        background-size: 95%;
+        background-size: 85%;
         font-family: 'Lato', sans-serif;
         font-weight: bold;
         background-color: var(--primary-color);
@@ -95,7 +98,7 @@ header nav ul {
       
         background-image: url(/imgs/body-background-white.png);
         background-repeat: no-repeat;
-        background-size: 95%;
+        background-size: 85%;
         font-family: 'Lato', sans-serif;
         font-weight: bold;
         background-color: var(--primary-color);
@@ -105,7 +108,7 @@ header nav ul {
 
 .name-social-media{
         color: var(--primary-color);
-        margin: 115px 0 0 50px;
+        margin: 115px 0 0 30px;
         display: flex;
         height: 220px;
         flex-direction: column;
@@ -127,9 +130,9 @@ header nav ul {
 }
 
 .about-me img {
-        width:300px;
-        height:300px;
-        filter: grayscale(100%);
+        width:340px;
+        height:340px;
+
         border-radius: 10px;
         box-shadow: 8px 8px 7px rgba(0, 0, 0, 0.8);
 }
@@ -183,7 +186,7 @@ section h3 {
         right: 89px;
         z-index: -1;
         position: absolute;
-        width: 23%;
+        width: 20%;
 }
 .projects{
         text-align: justify;
@@ -192,21 +195,22 @@ section h3 {
 
 }
 .projects img {
- width:80%;
+ width:75%;
  height: 250px;
  border-radius: 10px;
- filter: grayscale(95%);
-
-
- 
+ filter: grayscale(10%);
 }
 
 .skills{
 width:50%;
         margin: 30px;      
 }
+
+a {
+        color:var(--third-color)
+}
 /*****TOGGLE *****/
-.toggle {
+.toggle, .toggle-res {
         position: relative;
         width: 48px;
         height: 25px;
@@ -214,11 +218,11 @@ width:50%;
         border-radius: 10px;
       }
       
-      .toggle input[type="checkbox"] {
+      .toggle input[type="checkbox"],.toggle-res input[type="checkbox"] {
         display: none;
       }
       
-      .toggle-circle {
+      .toggle-circle, .toggle-circle-res {
         position: absolute;
         top: 0;
         left: 0;
@@ -227,6 +231,18 @@ width:50%;
         border-radius: 50%;
         cursor: pointer;
 
+      }
+      .toggle-circle-res::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--second-color);
+        transition: transform 0.3s;
       }
       
       .toggle-circle::before {
@@ -246,8 +262,58 @@ width:50%;
       .toggle input[type="checkbox"]:checked + .toggle-circle::before {
         transform: translate(100%, -50%);
       }
+      .toggle-res input[type="checkbox"]:checked + .toggle-circle-res::before {
+        transform: translate(100%, -50%);
+      }
 
 /*****************************************************************/
+/**********MENU MOBILE************/
+#menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: center;
+        gap: 7px;
+        position: absolute;
+        top: 95px;
+        border-radius: 10px;
+        opacity: 0.9;
+        right: 3%;
+        padding: 11px;
+        background-color: var(--second-color);
+        z-index: 200;
+        margin-right: 15px;
+    }
+    
+    #menu-mobile {
+        display: none;
+        position: absolute;
+        width: 111px;
+        z-index: 1568;
+        right: 0%;
+        top: -29px;
+        background-color: var(--secondary-color);
+    }
+    
+    #menu-mobile ul li {
+        gap: 10px;
+        font-weight: 600;
+        font-size: 18px;
+        user-select: none;
+    }
+    #menu-mobile ul li a {
+        color: var(--primary-color);
+    }
+
+    #burguer {
+        display:none
+    }
+
+    /**************************************************************************/
+
+
+
 
 footer {
         background-color: var(--second-color);
@@ -259,3 +325,81 @@ footer {
 footer p {
         color: var(--primary-color);
 }
+
+ul li a:hover{
+        color:var(--third-color)
+}
+@media(max-width: 882px){
+        .blue-bg{
+                background-size: 100%;
+        }
+        .white-bg{
+                background-size: 100%;
+        }
+        .blue-header{
+                background-size: 15% ;
+        }
+        .white-header{
+                background-size: 15%
+        }
+        @media (max-width:680px) {
+                .about-me img{
+                        border-radius: 50%;
+                }
+
+                .blue-bg{
+                        background-size: 125%;
+                }
+                .white-bg{
+                        background-size: 125%;
+                }
+                .blue-header{
+                        background-size: 20% ;
+                }
+                .white-header{
+                        background-size: 20%
+                }
+
+               
+                @media (max-width: 502px) {
+                        .projects-container{
+
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+
+                        header>nav>ul>li {
+                            display: none;
+                        }
+                        #burguer {
+                                display: block;
+                            }
+                        #home-container{
+                                display:block
+                        }
+                        header>nav>ul {
+                                display:flex;
+                                justify-content: space-around;
+                                gap:0
+                        }
+                        .blue-header{
+                                background-size: 32%;
+                                background-position: 80px 5px;
+                        }
+                        .white-header{
+                                background-size: 32%;
+                                background-position: 80px 5px;
+                        }
+                        .blue-bg{
+                                background-size: 140%;
+                        }
+                        .white-bg {
+                                background-size: 140%;
+                        }
+                }
+        }
+
+
+     
+ 
